@@ -28,7 +28,11 @@ public class LeitorService {
 	return repository.save(leitor);
     }
 
-    public Leitor atualizar(LeitorRequest leitorRequest) {
+    public Leitor atualizar(LeitorRequest leitorRequest) throws LeitorException {
+	Optional<Leitor> leitorOpt = repository.findById(leitorRequest.getId());
+	if (leitorOpt.isEmpty()) {
+	    throw new LeitorException("Leitor não econtrado");
+	}
 	Leitor leitor = leitorRequest.toModelUpdate();
 	return repository.save(leitor);
     }

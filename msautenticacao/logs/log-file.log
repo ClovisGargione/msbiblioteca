@@ -581,3 +581,86 @@
 2024-10-14T03:18:27.767-03:00  INFO 1835862 --- [msautenticacao] [RMI TCP Connection(14)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
 2024-10-14T03:18:27.845-03:00  INFO 1835862 --- [msautenticacao] [RMI TCP Connection(14)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAUTENTICACAO/msautenticacao:8085 - deregister  status: 200
 2024-10-14T03:18:27.846-03:00  INFO 1835862 --- [msautenticacao] [RMI TCP Connection(14)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-10-14T13:58:33.707-03:00  INFO 33437 --- [msautenticacao] [restartedMain] i.g.c.m.MsautenticacaoApplication        : Starting MsautenticacaoApplication using Java 17.0.10 with PID 33437 (/home/credisfera/Documents/projetos-estudos/desafio-viasoft/msautenticacao/target/classes started by credisfera in /home/credisfera/Documents/projetos-estudos/desafio-viasoft/msautenticacao)
+2024-10-14T13:58:33.710-03:00  INFO 33437 --- [msautenticacao] [restartedMain] i.g.c.m.MsautenticacaoApplication        : The following 1 profile is active: "dev"
+2024-10-14T13:58:33.752-03:00  INFO 33437 --- [msautenticacao] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-14T13:58:33.752-03:00  INFO 33437 --- [msautenticacao] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-14T13:58:34.671-03:00  INFO 33437 --- [msautenticacao] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-14T13:58:34.805-03:00  INFO 33437 --- [msautenticacao] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 4 JPA repository interfaces.
+2024-10-14T13:58:35.141-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d14e54e7-5f36-3959-8fd0-b7dca05dbf05
+2024-10-14T13:58:35.321-03:00  WARN 33437 --- [msautenticacao] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-14T13:58:35.324-03:00  WARN 33437 --- [msautenticacao] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-14T13:58:35.696-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2024-10-14T13:58:35.707-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-14T13:58:35.708-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-14T13:58:35.751-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-14T13:58:35.751-03:00  INFO 33437 --- [msautenticacao] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1999 ms
+2024-10-14T13:58:35.984-03:00  INFO 33437 --- [msautenticacao] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-14T13:58:36.237-03:00  INFO 33437 --- [msautenticacao] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1025221b
+2024-10-14T13:58:36.239-03:00  INFO 33437 --- [msautenticacao] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-14T13:58:36.300-03:00  INFO 33437 --- [msautenticacao] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/msautenticacao (MySQL 8.0)
+2024-10-14T13:58:36.352-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.030s)
+2024-10-14T13:58:36.368-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `msautenticacao`: 1
+2024-10-14T13:58:36.372-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `msautenticacao` is up to date. No migration necessary.
+2024-10-14T13:58:36.450-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-14T13:58:36.490-03:00  INFO 33437 --- [msautenticacao] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-14T13:58:36.518-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-14T13:58:36.747-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-14T13:58:37.651-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-14T13:58:37.873-03:00  INFO 33437 --- [msautenticacao] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T13:58:38.106-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-14T13:58:38.747-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-14T13:58:38.824-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'msleitor' URL not provided. Will try picking an instance via load-balancing.
+2024-10-14T13:58:39.130-03:00  INFO 33437 --- [msautenticacao] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name dadosDoUsuarioService
+2024-10-14T13:58:40.022-03:00  INFO 33437 --- [msautenticacao] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-10-14T13:58:40.055-03:00  WARN 33437 --- [msautenticacao] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-10-14T13:58:40.126-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-10-14T13:58:40.148-03:00  INFO 33437 --- [msautenticacao] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-10-14T13:58:40.151-03:00  INFO 33437 --- [msautenticacao] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-14T13:58:40.159-03:00  INFO 33437 --- [msautenticacao] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-10-14T13:58:40.159-03:00  INFO 33437 --- [msautenticacao] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-10-14T13:58:40.159-03:00  INFO 33437 --- [msautenticacao] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-10-14T13:58:40.159-03:00  INFO 33437 --- [msautenticacao] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-10-14T13:58:40.159-03:00  INFO 33437 --- [msautenticacao] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-10-14T13:58:40.159-03:00  INFO 33437 --- [msautenticacao] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-10-14T13:58:40.159-03:00  INFO 33437 --- [msautenticacao] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-10-14T13:58:40.705-03:00  INFO 33437 --- [msautenticacao] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-10-14T13:58:40.706-03:00  INFO 33437 --- [msautenticacao] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-10-14T13:58:40.708-03:00  INFO 33437 --- [msautenticacao] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-10-14T13:58:40.710-03:00  INFO 33437 --- [msautenticacao] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1728925120709 with initial instances count: 0
+2024-10-14T13:58:40.716-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MSAUTENTICACAO with eureka with status UP
+2024-10-14T13:58:40.717-03:00  INFO 33437 --- [msautenticacao] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1728925120717, current=UP, previous=STARTING]
+2024-10-14T13:58:40.718-03:00  INFO 33437 --- [msautenticacao] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAUTENTICACAO/msautenticacao:8085: registering service...
+2024-10-14T13:58:40.733-03:00  INFO 33437 --- [msautenticacao] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2024-10-14T13:58:40.733-03:00  INFO 33437 --- [msautenticacao] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2024-10-14T13:58:40.756-03:00  INFO 33437 --- [msautenticacao] [restartedMain] i.g.c.m.MsautenticacaoApplication        : Started MsautenticacaoApplication in 7.447 seconds (process running for 8.229)
+2024-10-14T13:58:40.907-03:00  INFO 33437 --- [msautenticacao] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAUTENTICACAO/msautenticacao:8085 - registration status: 204
+2024-10-14T13:59:10.707-03:00  INFO 33437 --- [msautenticacao] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-10-14T13:59:10.708-03:00  INFO 33437 --- [msautenticacao] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-10-14T13:59:10.709-03:00  INFO 33437 --- [msautenticacao] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-10-14T13:59:10.709-03:00  INFO 33437 --- [msautenticacao] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-10-14T13:59:10.710-03:00  INFO 33437 --- [msautenticacao] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-10-14T13:59:10.710-03:00  INFO 33437 --- [msautenticacao] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2024-10-14T13:59:10.711-03:00  INFO 33437 --- [msautenticacao] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-10-14T13:59:10.938-03:00  INFO 33437 --- [msautenticacao] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-10-14T13:59:36.635-03:00  INFO 33437 --- [msautenticacao] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-14T13:59:36.635-03:00  INFO 33437 --- [msautenticacao] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-14T13:59:36.637-03:00  INFO 33437 --- [msautenticacao] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-14T14:03:40.161-03:00  INFO 33437 --- [msautenticacao] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-14T14:08:40.163-03:00  INFO 33437 --- [msautenticacao] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-14T14:13:40.163-03:00  INFO 33437 --- [msautenticacao] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-14T14:18:40.164-03:00  INFO 33437 --- [msautenticacao] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-14T14:23:40.165-03:00  INFO 33437 --- [msautenticacao] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-14T14:28:40.166-03:00  INFO 33437 --- [msautenticacao] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-14T14:29:30.577-03:00  INFO 33437 --- [msautenticacao] [RMI TCP Connection(41)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-10-14T14:29:30.578-03:00  INFO 33437 --- [msautenticacao] [RMI TCP Connection(41)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MSAUTENTICACAO with eureka with status DOWN
+2024-10-14T14:29:30.578-03:00  INFO 33437 --- [msautenticacao] [RMI TCP Connection(41)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1728926970578, current=DOWN, previous=UP]
+2024-10-14T14:29:30.578-03:00  INFO 33437 --- [msautenticacao] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAUTENTICACAO/msautenticacao:8085: registering service...
+2024-10-14T14:29:30.592-03:00  INFO 33437 --- [msautenticacao] [RMI TCP Connection(41)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T14:29:30.594-03:00  INFO 33437 --- [msautenticacao] [RMI TCP Connection(41)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-14T14:29:30.597-03:00  INFO 33437 --- [msautenticacao] [RMI TCP Connection(41)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-14T14:29:30.597-03:00  INFO 33437 --- [msautenticacao] [RMI TCP Connection(41)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-10-14T14:29:30.670-03:00  INFO 33437 --- [msautenticacao] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAUTENTICACAO/msautenticacao:8085 - registration status: 204
+2024-10-14T14:29:30.670-03:00  INFO 33437 --- [msautenticacao] [RMI TCP Connection(41)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-10-14T14:29:30.749-03:00  INFO 33437 --- [msautenticacao] [RMI TCP Connection(41)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAUTENTICACAO/msautenticacao:8085 - deregister  status: 200
+2024-10-14T14:29:30.749-03:00  INFO 33437 --- [msautenticacao] [RMI TCP Connection(41)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

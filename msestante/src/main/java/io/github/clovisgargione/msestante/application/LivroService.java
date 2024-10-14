@@ -86,7 +86,7 @@ public class LivroService {
     private Optional<Estante> buscarEstante(LivroRequest livroRequest) throws EstanteException, LeitorException {
 	Optional<Estante> estante = Optional.empty();
 	try {
-	    ResponseEntity<LeitorResponse> response = leitorResourceClient.buscarPorId(livroRequest.getIdLeitor());
+	    leitorResourceClient.buscarPorId(livroRequest.getIdLeitor());
 	} catch(FeignClientException fce) {
 	    if(fce.status() == 404) {
 		throw new LeitorException("O leitor informado não está cadastrado.");

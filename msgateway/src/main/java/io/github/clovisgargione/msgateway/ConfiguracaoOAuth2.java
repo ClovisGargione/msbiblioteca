@@ -25,9 +25,8 @@ public class ConfiguracaoOAuth2 {
 		"/api/v1/public/**", "/webjars/**", "/js/**", "/jquery*", "/oauth2/authorize**" };
 	httpSecurity.securityMatcher("/secure/**", "/api/v1/secure/**")
 		.authorizeHttpRequests(req -> req.requestMatchers(caminhosPermitidos).permitAll()
-			/*
-			 * .requestMatchers("/api/v2/**") .hasAnyAuthority("SCOPE_read", "SCOPE_write")
-			 */.anyRequest().authenticated())
+			.requestMatchers("/secure/**", "/api/v1/secure/**").hasAnyAuthority("SCOPE_read", "SCOPE_write")
+			.anyRequest().authenticated())
 		.oauth2ResourceServer(oauth2 -> oauth2.jwt(jwt -> jwt.decoder(jwtDecoder()))).csrf((c) -> c.disable())
 		.sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 	return httpSecurity.build();
