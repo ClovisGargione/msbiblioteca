@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: msautenticacao
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: clovis.gargione
+    password: tr0ub4do
+  datasource:
+    url: jdbc:mysql://192.168.1.13:3306/msautenticacao
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: update
+    open-in-view: false
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+  security:
+    oauth2:
+      authorizationserver:
+        issuer: http://msautenticacao:8085
+
+eureka:
+  client:
+    fetch-registry: true
+    registerWithEureka: true
+    service-url:
+      defaultZone: http://mseurekauser:ecok-usr-eeuramssur@mseureka:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+server:
+  port: 8085
+logging:
+  file:
+    name: ./logs/log-file.log
+springdoc:
+  api-docs:
+    path: /docs
+  swagger-ui:
+    defaultModelsExpandDepth: -1
+jwt:
+  auth:
+    secret-key: $2a$08$G1S43b7sRFttMmoNX6TFMOKfrXJ03Vrc81tJDVgRNfwBn/nF7eO6q
+flyway:
+  baseline-on-migrate: true
+  enabled: true
+mq:
+  queues:
+    excluir-leitor: excluir-leitor

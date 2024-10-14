@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: mseureka
+  security:
+    basic:
+      enable: true
+    user:
+      name: mseurekauser
+      password: ecok-usr-eeuramssur
+server:
+  port: 8761
+eureka:
+  client:
+    registerWithEureka: false
+    fetch-registry: false
+    service-url: 
+      defaultZone: http://${eureka.security.user.name}:${eureka.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+  security:
+    user:
+      name: mseurekauser
+      password: ecok-usr-eeuramssur
+  instance:
+    hostname: eurekaserver
+  server:
+    enable-self-preservation: false
+    expected-client-renewal-interval-seconds: 3
+    max-time-for-replication: 3
+    peer-node-connection-idle-timeout-seconds: 3
+    remote-region-connection-idle-timeout-seconds: 3
+    remote-region-registry-fetch-interval: 3
+    renewal-percent-threshold: 0.85
+    response-cache-auto-expiration-in-seconds: 3

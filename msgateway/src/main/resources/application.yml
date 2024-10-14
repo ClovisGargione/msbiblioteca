@@ -1,0 +1,63 @@
+spring:
+  application:
+    name: msgateway
+  profiles:
+    active: dev
+  cloud:
+    loadbalancer:
+      health-check:
+        refetch-instances-interval: 3
+        refetch-instances: true
+        interval: 3
+      cache:
+        enabled: false
+        ttl: 3
+    gateway:
+      mvc:
+       routes:
+       - id: msleitor
+         uri: lb://msleitor
+         predicates:
+         - Path=/api/v1/secure/leitor/**   
+         filters:
+         - StripPrefix=0
+       - id: msestante
+         uri: lb://msestante
+         predicates:
+         - Path=/api/v1/secure/estante/**, /api/v1/secure/livro/**
+         filters:
+         - StripPrefix=0
+       - id: msautenticacao
+         uri: lb://msautenticacao
+         predicates:
+         - Path=/secure/**, /oauth2/token, /public/**, /oauth2/introspect
+         filters:
+         - StripPrefix=0
+      discovery:
+          locator:
+            enabled: true
+            lower-case-service-id: true
+  security:
+    oauth2:
+      authorizationserver:
+        issuer: http://localhost:8085
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8085
+info:
+  app:
+    name: ${spring.application.name}
+
+eureka:
+  client:
+    registry-fetch-interval-seconds: 3
+    instance-info-replication-interval-seconds: 3
+    eureka-connection-idle-timeout-seconds: 3
+    fetch-registry: true
+    registerWithEureka: true
+    serviceUrl: 
+      defaultZone: http://mseurekauser:ecok-usr-eeuramssur@localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}} 
+server:
+  port: 8080    
